@@ -29,12 +29,12 @@ def business_inventory():
         quantity_literal = Literal(row['quantity'], datatype=XSD.float)
         
         # Add triples to the RDF graph
-        g.add((subject, pub.idStore, store_id_literal))
-        g.add((subject, pub.nameStore, store_name_literal))
-        g.add((subject, pub.nameProduct, product_name_literal))
-        g.add((subject, pub.unitPrice, product_price_literal))
-        g.add((subject, pub.dateManufacture, date_manufacture_literal))
-        g.add((subject, pub.dateExpiry, date_expiry_literal))
+        g.add((subject, pub.store_id, store_id_literal))
+        g.add((subject, pub.store_name, store_name_literal))
+        g.add((subject, pub.product_name, product_name_literal))
+        g.add((subject, pub.unit_price, product_price_literal))
+        g.add((subject, pub.manufacture_date, date_manufacture_literal))
+        g.add((subject, pub.expiry_date, date_expiry_literal))
         g.add((subject, pub.quantity, quantity_literal))
 
     return g

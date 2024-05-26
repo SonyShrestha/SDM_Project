@@ -22,8 +22,8 @@ def customers():
         # email_id_literal = Literal(row['email_id'], datatype = XSD.string)
         
         # Add triples to the RDF graph
-        g.add((subject, pub.idCustomer, customer_id_literal))
-        g.add((subject, pub.nameCustomer, customer_name_literal))
+        g.add((subject, pub.customer_id, customer_id_literal))
+        g.add((subject, pub.customer_name, customer_name_literal))
         #g.add((subject, pub.email_id, email_id_literal))
 
     return g

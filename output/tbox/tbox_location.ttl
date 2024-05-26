@@ -4,15 +4,15 @@
 
 <http://www.example.edu/spicy_bytes/Location> a rdfs:Class .
 
-<http://www.example.edu/spicy_bytes/countryCode> a rdf:Property ;
-    rdfs:domain <http://www.example.edu/spicy_bytes/Location> ;
-    rdfs:range xsd:string .
-
-<http://www.example.edu/spicy_bytes/idLocation> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/country_code> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/Location> ;
     rdfs:range xsd:string .
 
 <http://www.example.edu/spicy_bytes/latitude> a rdf:Property ;
+    rdfs:domain <http://www.example.edu/spicy_bytes/Location> ;
+    rdfs:range xsd:string .
+
+<http://www.example.edu/spicy_bytes/location_id> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/Location> ;
     rdfs:range xsd:string .
 
@@ -24,7 +24,7 @@
     rdfs:domain <http://www.example.edu/spicy_bytes/Location> ;
     rdfs:range xsd:string .
 
-<http://www.example.edu/spicy_bytes/postalCode> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/postal_code> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/Location> ;
     rdfs:range xsd:string .
 

@@ -24,10 +24,10 @@ def location():
         longitude_literal = Literal(row['longitude'], datatype = XSD.string)
         
         # Add triples to the RDF graph
-        g.add((subject, pub.idLocation, location_id_literal))
-        g.add((subject, pub.countryCode, country_code_literal))
-        g.add((subject, pub.postalCode, postal_code_literal))
-        g.add((subject, pub.placeName, place_name_literal))
+        g.add((subject, pub.location_id, location_id_literal))
+        g.add((subject, pub.country_code, country_code_literal))
+        g.add((subject, pub.postal_code, postal_code_literal))
+        g.add((subject, pub.place_name, place_name_literal))
         g.add((subject, pub.latitude, latitude_literal))
         g.add((subject, pub.longitude, longitude_literal))
 

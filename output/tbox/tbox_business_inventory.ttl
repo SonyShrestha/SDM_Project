@@ -4,23 +4,15 @@
 
 <http://www.example.edu/spicy_bytes/BusinessInventory> a rdfs:Class .
 
-<http://www.example.edu/spicy_bytes/dateExpiry> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/expiry_date> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
     rdfs:range xsd:date .
 
-<http://www.example.edu/spicy_bytes/dateManufacture> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/manufacture_date> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
     rdfs:range xsd:date .
 
-<http://www.example.edu/spicy_bytes/idStore> a rdf:Property ;
-    rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
-    rdfs:range xsd:string .
-
-<http://www.example.edu/spicy_bytes/nameProduct> a rdf:Property ;
-    rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
-    rdfs:range xsd:string .
-
-<http://www.example.edu/spicy_bytes/nameStore> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/product_name> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
     rdfs:range xsd:string .
 
@@ -28,7 +20,15 @@
     rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
     rdfs:range xsd:float .
 
-<http://www.example.edu/spicy_bytes/unitPrice> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/store_id> a rdf:Property ;
+    rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
+    rdfs:range xsd:string .
+
+<http://www.example.edu/spicy_bytes/store_name> a rdf:Property ;
+    rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
+    rdfs:range xsd:string .
+
+<http://www.example.edu/spicy_bytes/unit_price> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/BusinessInventory> ;
     rdfs:range xsd:float .
 

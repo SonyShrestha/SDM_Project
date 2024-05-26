@@ -28,12 +28,12 @@ def spicybytes_c2c():
         purchase_date_literal = Literal(row['quantity'], datatype=XSD.date)
         
         # Add triples to the RDF graph
-        g.add((subject, pub.idBuyer, buyer_id_literal))
-        g.add((subject, pub.idSeller, seller_id_literal))
-        g.add((subject, pub.nameProduct, product_name_literal))
-        g.add((subject, pub.unitPrice, product_price_literal))
+        g.add((subject, pub.buyer_id, buyer_id_literal))
+        g.add((subject, pub.seller_id, seller_id_literal))
+        g.add((subject, pub.product_name, product_name_literal))
+        g.add((subject, pub.unit_price, product_price_literal))
         g.add((subject, pub.quantity, quantity_literal))
-        g.add((subject, pub.datePurchase, purchase_date_literal))
+        g.add((subject, pub.date_purchase, purchase_date_literal))
 
     return g
 

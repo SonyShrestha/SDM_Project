@@ -20,8 +20,8 @@ def customer_location():
         location_literal = Literal(row['location_id'], datatype = XSD.string)
         
         # Add triples to the RDF graph
-        g.add((subject, pub.idCustomer, customer_literal))
-        g.add((subject, pub.idLocation, location_literal))
+        g.add((subject, pub.customer_id, customer_literal))
+        g.add((subject, pub.location_id, location_literal))
 
     return g
 

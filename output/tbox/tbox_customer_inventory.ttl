@@ -4,27 +4,27 @@
 
 <http://www.example.edu/spicy_bytes/CustomerInventory> a rdfs:Class .
 
-<http://www.example.edu/spicy_bytes/datePurchased> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/customer_id> a rdf:Property ;
+    rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
+    rdfs:range xsd:string .
+
+<http://www.example.edu/spicy_bytes/customer_name> a rdf:Property ;
+    rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
+    rdfs:range xsd:string .
+
+<http://www.example.edu/spicy_bytes/product_name> a rdf:Property ;
+    rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
+    rdfs:range xsd:string .
+
+<http://www.example.edu/spicy_bytes/purchase_date> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
     rdfs:range xsd:date .
-
-<http://www.example.edu/spicy_bytes/idCustomer> a rdf:Property ;
-    rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
-    rdfs:range xsd:string .
-
-<http://www.example.edu/spicy_bytes/nameCustomer> a rdf:Property ;
-    rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
-    rdfs:range xsd:string .
-
-<http://www.example.edu/spicy_bytes/nameProduct> a rdf:Property ;
-    rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
-    rdfs:range xsd:string .
 
 <http://www.example.edu/spicy_bytes/quantity> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
     rdfs:range xsd:float .
 
-<http://www.example.edu/spicy_bytes/unitPrice> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/unit_price> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/CustomerInventory> ;
     rdfs:range xsd:float .
 

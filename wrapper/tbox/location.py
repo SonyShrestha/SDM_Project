@@ -15,17 +15,17 @@ g.add((sb.Location, RDF.type, RDFS.Class))
 
 
 # Properties of class location
-g.add((sb.idLocation, RDF.type, RDF.Property))
-g.add((sb.idLocation, RDFS.domain, sb.Location))
-g.add((sb.idLocation, RDFS.range, XSD.string))
+g.add((sb.location_id, RDF.type, RDF.Property))
+g.add((sb.location_id, RDFS.domain, sb.Location))
+g.add((sb.location_id, RDFS.range, XSD.string))
 
-g.add((sb.countryCode, RDF.type, RDF.Property))
-g.add((sb.countryCode, RDFS.domain, sb.Location))
-g.add((sb.countryCode, RDFS.range, XSD.string))
+g.add((sb.country_code, RDF.type, RDF.Property))
+g.add((sb.country_code, RDFS.domain, sb.Location))
+g.add((sb.country_code, RDFS.range, XSD.string))
 
-g.add((sb.postalCode, RDF.type, RDF.Property))
-g.add((sb.postalCode, RDFS.domain, sb.Location))
-g.add((sb.postalCode, RDFS.range, XSD.string))
+g.add((sb.postal_code, RDF.type, RDF.Property))
+g.add((sb.postal_code, RDFS.domain, sb.Location))
+g.add((sb.postal_code, RDFS.range, XSD.string))
 
 g.add((sb.place_name, RDF.type, RDF.Property))
 g.add((sb.place_name, RDFS.domain, sb.Location))

@@ -14,21 +14,21 @@ g = Graph()
 g.add((sb.Supermarket, RDF.type, RDFS.Class))
 
 # Properties of class location
-g.add((sb.idSupermarket, RDF.type, RDF.Property))
-g.add((sb.idSupermarket, RDFS.domain, sb.Supermarket))
-g.add((sb.idSupermarket, RDFS.range, XSD.string))
+g.add((sb.supermarket_id, RDF.type, RDF.Property))
+g.add((sb.supermarket_id, RDFS.domain, sb.Supermarket))
+g.add((sb.supermarket_id, RDFS.range, XSD.string))
 
-g.add((sb.nameCommercial, RDF.type, RDF.Property))
-g.add((sb.nameCommercial, RDFS.domain, sb.Supermarket))
-g.add((sb.nameCommercial, RDFS.range, XSD.string))
+g.add((sb.commercial_name, RDF.type, RDF.Property))
+g.add((sb.commercial_name, RDFS.domain, sb.Supermarket))
+g.add((sb.commercial_name, RDFS.range, XSD.string))
 
-g.add((sb.companyNIF, RDF.type, RDF.Property))
-g.add((sb.companyNIF, RDFS.domain, sb.Supermarket))
-g.add((sb.companyNIF, RDFS.range, XSD.string))
+g.add((sb.company_NIF, RDF.type, RDF.Property))
+g.add((sb.company_NIF, RDFS.domain, sb.Supermarket))
+g.add((sb.company_NIF, RDFS.range, XSD.string))
 
-g.add((sb.countryCode, RDF.type, RDF.Property))
-g.add((sb.countryCode, RDFS.domain, sb.Supermarket))
-g.add((sb.countryCode, RDFS.range, XSD.string))
+g.add((sb.country_code, RDF.type, RDF.Property))
+g.add((sb.country_code, RDFS.domain, sb.Supermarket))
+g.add((sb.country_code, RDFS.range, XSD.string))
 
 g.add((sb.UTMx, RDF.type, RDF.Property))
 g.add((sb.UTMx, RDFS.domain, sb.Supermarket))

@@ -28,10 +28,10 @@ def supermarket():
         # email_id_literal = Literal(row['email_id'], datatype = XSD.string)
         
         # Add triples to the RDF graph
-        g.add((subject, pub.idSupermarket, supermarket_id_literal))
-        g.add((subject, pub.nameCommercial, commercial_name_literal))
-        g.add((subject, pub.companyNIF, company_nif_literal))
-        g.add((subject, pub.countryCode, county_code_literal))
+        g.add((subject, pub.supermarket_id, supermarket_id_literal))
+        g.add((subject, pub.commercial_name, commercial_name_literal))
+        g.add((subject, pub.company_NIF, company_nif_literal))
+        g.add((subject, pub.country_code, county_code_literal))
         g.add((subject, pub.UTMx, utmx_literal))
         g.add((subject, pub.UTMy, utmy_literal))
         g.add((subject, pub.latitude, latitude))

@@ -4,11 +4,11 @@
 
 <http://www.example.edu/spicy_bytes/CustomerLocation> a rdfs:Class .
 
-<http://www.example.edu/spicy_bytes/idCustomer> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/customer_id> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/CustomerLocation> ;
     rdfs:range xsd:string .
 
-<http://www.example.edu/spicy_bytes/idLocation> a rdf:Property ;
+<http://www.example.edu/spicy_bytes/location_id> a rdf:Property ;
     rdfs:domain <http://www.example.edu/spicy_bytes/CustomerLocation> ;
     rdfs:range xsd:string .
 

@@ -26,12 +26,12 @@ def customer_inventory():
         
         # Add triples to the RDF graph
         # g.add((subject, predicate, obj))
-        g.add((subject, pub.idCustomer, customer_id_literal))
-        g.add((subject, pub.nameCustomer, customer_name_literal))
-        g.add((subject, pub.nameProduct, product_name_literal))
+        g.add((subject, pub.customer_id, customer_id_literal))
+        g.add((subject, pub.customer_name, customer_name_literal))
+        g.add((subject, pub.product_name, product_name_literal))
         g.add((subject, pub.unit_price, unit_price_literal))
         g.add((subject, pub.quantity, quantity_literal))
-        g.add((subject, pub.datePurchased, purchased_date_literal))
+        g.add((subject, pub.purchase_date, purchased_date_literal))
 
     return g
 

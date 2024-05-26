@@ -15,13 +15,13 @@ g.add((sb.Customer, RDF.type, RDFS.Class))
 
 
 # Properties of class location
-g.add((sb.idCustomer, RDF.type, RDF.Property))
-g.add((sb.idCustomer, RDFS.domain, sb.Customer))
-g.add((sb.idCustomer, RDFS.range, XSD.string))
+g.add((sb.customer_id, RDF.type, RDF.Property))
+g.add((sb.customer_id, RDFS.domain, sb.Customer))
+g.add((sb.customer_id, RDFS.range, XSD.string))
 
-g.add((sb.nameCustomer, RDF.type, RDF.Property))
-g.add((sb.nameCustomer, RDFS.domain, sb.Customer))
-g.add((sb.nameCustomer, RDFS.range, XSD.string))
+g.add((sb.customer_name, RDF.type, RDF.Property))
+g.add((sb.customer_name, RDFS.domain, sb.Customer))
+g.add((sb.customer_name, RDFS.range, XSD.string))
 
 
 g.serialize(destination='./output/tbox/tbox_customer.ttl', format='turtle')
