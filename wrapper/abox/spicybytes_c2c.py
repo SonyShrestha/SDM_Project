@@ -12,20 +12,22 @@ g = Graph()
 
 def spicybytes_c2c():
     # Read the CSV file with specified encoding
-    spicybytes_b2c_df = pd.read_csv('./data/spicybytes_c2c.csv')
+    spicybytes_c2c_df = pd.read_csv('./data/spicybytes_c2c.csv')
+
+    spicybytes_c2c_df = spicybytes_c2c_df[spicybytes_c2c_df["selling_date"].notnull()]
     
     # Normalize product names to lowercase and URL-encode
-    spicybytes_b2c_df['product_name'] = spicybytes_b2c_df['product_name'].str.lower().apply(quote)
+    spicybytes_c2c_df['product_name'] = spicybytes_c2c_df['product_name'].str.lower().apply(quote)
 
-    for index, row in spicybytes_b2c_df.iterrows():
-        subject = URIRef(pub + 'spicybytes_c2c/seller=' + str(row['store_id']) + "/buyer=" + str(row['customer_id']) + "/product=" + str(row['product_name'])+ "/date=" + str(row['purchase_date']))
+    for index, row in spicybytes_c2c_df.iterrows():
+        subject = URIRef(pub + 'spicybytes_c2c/seller=' + str(row['customer_id']) + "/buyer=" + str(row['buying_customer_id']) + "/product=" + str(row['product_name'])+ "/date=" + str(row['selling_date']))
 
-        buyer_id_literal = Literal(row['store_id'], datatype=XSD.string)
-        seller_id_literal = Literal(row['store_name'], datatype=XSD.string)
+        buyer_id_literal = Literal(row['buying_customer_id'], datatype=XSD.string)
+        seller_id_literal = Literal(row['customer_id'], datatype=XSD.string)
         product_name_literal = Literal(row['product_name'], datatype=XSD.string) 
-        product_price_literal = Literal(row['product_price'].replace(',',''), datatype=XSD.float)
+        product_price_literal = Literal(row['unit_price'], datatype=XSD.float)
         quantity_literal = Literal(row['quantity'], datatype=XSD.float)
-        purchase_date_literal = Literal(row['quantity'], datatype=XSD.date)
+        purchase_date_literal = Literal(row['selling_date'], datatype=XSD.date)
         
         # Add triples to the RDF graph
         g.add((subject, pub.buyer_id, buyer_id_literal))
