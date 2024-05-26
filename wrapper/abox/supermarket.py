@@ -12,7 +12,7 @@ g = Graph()
 
 
 def supermarket():
-    customers_df = pd.read_csv('./data/establishments_catalonia.csv')
+    customers_df = pd.read_csv('./data/supermmarket.csv')
 
     for index, row in customers_df.iterrows():
         subject = URIRef(pub + 'supermarket/'+str(row['id']))

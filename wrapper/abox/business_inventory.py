@@ -12,7 +12,7 @@ g = Graph()
 
 def business_inventory():
     # Read the CSV file with specified encoding
-    business_inventory_df = pd.read_csv('./data/supermarket_products.csv')
+    business_inventory_df = pd.read_csv('./data/business_inventory.csv')
     
     # Normalize product names to lowercase and URL-encode
     business_inventory_df['product_name'] = business_inventory_df['product_name'].str.lower().apply(quote)

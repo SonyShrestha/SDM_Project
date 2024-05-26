@@ -11,7 +11,7 @@ g = Graph()
 
 
 def customer_inventory():
-    customer_purchase_df = pd.read_csv('./data/customer_purchase.csv')
+    customer_purchase_df = pd.read_csv('./data/customer_inventory.csv')
     customer_purchase_df['product_name'] = customer_purchase_df['product_name'].str.lower().apply(quote)
 
     for index, row in customer_purchase_df.iterrows():
