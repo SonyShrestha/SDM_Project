@@ -4,7 +4,7 @@ from urllib.parse import quote
 import datetime
 
 # Define namespaces
-pub = Namespace("http://www.example.edu/spicybytes/")
+pub = Namespace("http://www.spicybytes.com/")
 xsd = Namespace("http://www.w3.org/2001/XMLSchema#")
 
 # Create an RDF graph
