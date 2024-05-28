@@ -20,12 +20,12 @@ def spicybytes_b2c():
     for index, row in spicybytes_b2c_df.iterrows():
         subject = URIRef(pub + 'spicybytes_b2c/seller=' + str(row['store_id']) + "/buyer=" + str(row['customer_id']) + "/product=" + str(row['product_name'])+ "/date=" + str(row['purchase_date']))
 
-        buyer_id_literal = Literal(row['store_id'], datatype=XSD.string)
-        seller_id_literal = Literal(row['store_name'], datatype=XSD.string)
+        buyer_id_literal = Literal(row['customer_id'], datatype=XSD.string)
+        seller_id_literal = Literal(row['store_id'], datatype=XSD.string)
         product_name_literal = Literal(row['product_name'], datatype=XSD.string) 
-        product_price_literal = Literal(row['product_price'].replace(',',''), datatype=XSD.float)
+        product_price_literal = Literal(row['unit_price'], datatype=XSD.float)
         quantity_literal = Literal(row['quantity'], datatype=XSD.float)
-        purchase_date_literal = Literal(row['quantity'], datatype=XSD.date)
+        purchase_date_literal = Literal(row['purchase_date'], datatype=XSD.date)
         
         # Add triples to the RDF graph
         g.add((subject, pub.buyer_id, buyer_id_literal))
