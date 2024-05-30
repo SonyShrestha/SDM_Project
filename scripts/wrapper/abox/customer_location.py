@@ -3,7 +3,7 @@ from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 from urllib.parse import quote
 
 # Define namespaces
-pub = Namespace("http://www.spicybytes.com/")
+pub = Namespace("http://www.example.edu/spicy_bytes/")
 xsd = Namespace("http://www.w3.org/2001/XMLSchema#")
 
 # Create an RDF graph
@@ -20,6 +20,7 @@ def customer_location():
         location_literal = Literal(row['location_id'], datatype = XSD.string)
         
         # Add triples to the RDF graph
+        g.add((subject, RDF.type, pub.CustomerLocation))
         g.add((subject, pub.customer_id, customer_literal))
         g.add((subject, pub.location_id, location_literal))
 

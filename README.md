@@ -18,11 +18,11 @@ This project demonstrates a virtual data integration solution using a knowledge 
 
 ### Step 2: Create Global Schema Repository
 
-1. **Create Global Schema Repository**: Manually Create a repository for the global schema in the GraphDB's workbench and load only the global TBox data in the output folder .
+1. **Create Global Schema Repository**: Manually Create a repository for the global schema with namespace http://www.example.edu/spicy_bytes/schema# in the GraphDB's workbench and load only the global TBox data in the output folder .
 
 ### Step 3: Create Federated Repository
 
-1. **Create Federated Repository**: In GraphDB, create a federated repository and add all local repositories and the global schema repository as members.
+1. **Create Federated Repository**: In GraphDB, create a federated repository anmed federation and add all local repositories and the global schema repository as members.
 
 ### Step 4: Run LAV Mapping
 

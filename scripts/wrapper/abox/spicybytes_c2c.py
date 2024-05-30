@@ -4,7 +4,7 @@ from urllib.parse import quote
 import datetime
 
 # Define namespaces
-pub = Namespace("http://www.spicybytes.com/")
+pub = Namespace("http://www.example.edu/spicy_bytes/")
 xsd = Namespace("http://www.w3.org/2001/XMLSchema#")
 
 # Create an RDF graph
@@ -30,6 +30,7 @@ def spicybytes_c2c():
         purchase_date_literal = Literal(row['selling_date'], datatype=XSD.date)
         
         # Add triples to the RDF graph
+        g.add((subject, RDF.type, pub.CustomerPurchase))
         g.add((subject, pub.buyer_id, buyer_id_literal))
         g.add((subject, pub.seller_id, seller_id_literal))
         g.add((subject, pub.product_name, product_name_literal))

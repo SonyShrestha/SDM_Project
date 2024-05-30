@@ -3,7 +3,7 @@ from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 from urllib.parse import quote
 
 # Define namespaces
-pub = Namespace("http://www.spicybytes.com/")
+pub = Namespace("http://www.example.edu/spicy_bytes/")
 xsd = Namespace("http://www.w3.org/2001/XMLSchema#")
 
 # Create an RDF graph
@@ -12,7 +12,7 @@ g = Graph()
 
 
 def supermarket():
-    customers_df = pd.read_csv('./data/supermmarket.csv')
+    customers_df = pd.read_csv('./data/supermarket.csv')
 
     for index, row in customers_df.iterrows():
         subject = URIRef(pub + 'supermarket/'+str(row['id']))
@@ -28,6 +28,7 @@ def supermarket():
         # email_id_literal = Literal(row['email_id'], datatype = XSD.string)
         
         # Add triples to the RDF graph
+        g.add((subject, RDF.type, pub.Supermarket))
         g.add((subject, pub.supermarket_id, supermarket_id_literal))
         g.add((subject, pub.commercial_name, commercial_name_literal))
         g.add((subject, pub.company_NIF, company_nif_literal))

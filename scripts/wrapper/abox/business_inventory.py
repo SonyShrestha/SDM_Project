@@ -4,7 +4,7 @@ from urllib.parse import quote
 import datetime
 
 # Define namespaces
-pub = Namespace("http://www.spicybytes.com/")
+pub = Namespace("http://www.example.edu/spicy_bytes/")
 xsd = Namespace("http://www.w3.org/2001/XMLSchema#")
 
 # Create an RDF graph
@@ -29,6 +29,7 @@ def business_inventory():
         quantity_literal = Literal(row['quantity'], datatype=XSD.float)
         
         # Add triples to the RDF graph
+        g.add((subject, RDF.type, pub.BusinessInventory))
         g.add((subject, pub.store_id, store_id_literal))
         g.add((subject, pub.store_name, store_name_literal))
         g.add((subject, pub.product_name, product_name_literal))
