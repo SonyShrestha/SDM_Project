@@ -5,11 +5,11 @@ This project demonstrates a virtual data integration solution using a knowledge 
 
 
 ## Prerequisites
-Python 3.x
-GraphDB installed and running locally
-RDFLib Python library
-SPARQLWrapper Python library
-TBox and ABox data files for various repositories
+1. Python 3.x
+2. GraphDB installed and running locally
+3. DFLib Python library
+4. SPARQLWrapper Python library
+5. TBox and ABox data files for various repositories
 
 ### Step 1: Create Local Repositories and Load Data
 
