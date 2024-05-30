@@ -13,12 +13,12 @@ This project demonstrates a virtual data integration solution using a knowledge 
 
 ### Step 1: Create Local Repositories and Load Data
 
-1. **Create Repositories**: Use the `repository_creation.py` script to create local repositories.
-2. **Load TBox and ABox**: Load TBox (schema) and ABox (instance) data into each local repository using GraphDB's workbench or SPARQL update queries.
+1. **Create Repositories**: Use the `repository_creation.py` script to create local repositories. It automatically Load TBox (schema) into the created respository
+2. **Load ABox**: Manually load the ABox (instance) data into each local repository using GraphDB's workbench.
 
 ### Step 2: Create Global Schema Repository
 
-1. **Create Global Schema Repository**: Create a repository for the global schema and load the combined TBox data from all local repositories.
+1. **Create Global Schema Repository**: Manually Create a repository for the global schema in the GraphDB's workbench and load only the global TBox data in the output folder .
 
 ### Step 3: Create Federated Repository
 
