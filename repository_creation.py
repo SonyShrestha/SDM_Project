@@ -133,14 +133,14 @@ create_repository('metadata')
 
 # File paths for TBox data
 tbox_files = {
-    'business_inventory': '/home/pce/Documents/SDM_Project/output/tbox/tbox_business_inventory.ttl',
-    'customer': '/home/pce/Documents/SDM_Project/output/tbox/tbox_customer.ttl',
-    'customer_inventory': '/home/pce/Documents/SDM_Project/output/tbox/tbox_customer_inventory.ttl',
-    'customer_location': '/home/pce/Documents/SDM_Project/output/tbox/tbox_customer_location.ttl',
-    'location': '/home/pce/Documents/SDM_Project/output/tbox/tbox_location.ttl',
-    'supermarkets': '/home/pce/Documents/SDM_Project/output/tbox/tbox_supermarket.ttl',
-    'spicybytes_b2c': '/home/pce/Documents/SDM_Project/output/tbox/tbox_spicybytes_b2c.ttl',
-    'spicybytes_c2c': '/home/pce/Documents/SDM_Project/output/tbox/tbox_spicybytes_c2c.ttl'
+    'business_inventory': './output/tbox/tbox_business_inventory.ttl',
+    'customer': './output/tbox/tbox_customer.ttl',
+    'customer_inventory': './output/tbox/tbox_customer_inventory.ttl',
+    'customer_location': './output/tbox/tbox_customer_location.ttl',
+    'location': './/output/tbox/tbox_location.ttl',
+    'supermarkets': './output/tbox/tbox_supermarket.ttl',
+    'spicybytes_b2c': './output/tbox/tbox_spicybytes_b2c.ttl',
+    'spicybytes_c2c': './output/tbox/tbox_spicybytes_c2c.ttl'
 }
 
 # Function to load data from files
