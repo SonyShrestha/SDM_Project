@@ -3,7 +3,7 @@ from rdflib import Graph, Namespace, Literal, RDF, XSD
 from datetime import datetime
 import sys
 
-# Temporarily increase the recursion limit (use with caution)
+# Temporarily increase the recursion limit 
 sys.setrecursionlimit(2000)
 
 GRAPHDB_BASE_URL = 'http://localhost:7200'
