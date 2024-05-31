@@ -13,8 +13,7 @@ This project demonstrates a virtual data integration solution using a knowledge 
 
 ### Step 1: Create Local Repositories and Load Data
 
-1. **Create Repositories**: Use the `repository_creation.py` script to create local repositories. It automatically Load TBox (schema) into the created respository. It also create different config files (DO NOT LOAD the config to GraphDB)
-2. **Load ABox**: Manually load the ABox (instance) data into each local repository using GraphDB's workbench.
+1. **Create Repositories**: Use the `repository_creation.py` script to create local repositories. It automatically Load **TBox (schema) and Abox (instance)** into the created respository. It also create different config files (DO NOT LOAD the config to GraphDB)
 
 ### Step 2: Create Global Schema Repository
 
