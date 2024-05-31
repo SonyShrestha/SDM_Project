@@ -58,7 +58,7 @@ def delete_repository(repo_id):
     url = f'{GRAPHDB_BASE_URL}/rest/repositories/{repo_id}'
     response = requests.delete(url)
     print(f"Delete repository response status: {response.status_code}")
-    if response.status_code == 204:
+    if response.status_code == 200:
         print(f"Repository '{repo_id}' deleted successfully.")
     else:
         print(f"Failed to delete repository '{repo_id}': {response.text}")
